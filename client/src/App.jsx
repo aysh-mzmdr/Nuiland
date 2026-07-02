@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-const Home = () => <div>Home</div>
-const NotFound = () => <div>404 - Not Found</div>
+import Home from "./layouts/Home.jsx"
+import Page404 from "./layouts/Page404.jsx"
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   )
