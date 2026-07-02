@@ -1,8 +1,12 @@
+import LogoBar from "../components/LogoBar"
 
 const Home = () => {
 
     return(
-        <h1>Home</h1>
+        <>
+            <LogoBar/>
+            <h1>Home</h1>
+        </>
     )
 } 
 
