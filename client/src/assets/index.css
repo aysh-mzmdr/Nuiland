@@ -57,11 +57,44 @@ body{
     }
 }
 
+.logo-bar-avatar-wrapper {
+    position: relative;
+}
+
 .logo-bar-avatar {
     width: 36px;
     height: 36px;
     border-radius: 50%;
     background: linear-gradient(135deg, #6366f1, #ec4899);
+    cursor: pointer;
+}
+
+.logo-bar-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    min-width: 120px;
+}
+
+.logo-bar-menu-disconnect {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    color: #ef4444;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.logo-bar-menu-disconnect:hover {
+    background: #fef2f2;
 }
 
 .logo-bar-connect-btn {
@@ -80,4 +113,25 @@ body{
 .logo-bar-connect-btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+}
+
+.home-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0;
+}
+
+.home-tab-btn {
+    padding: 8px 20px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.home-tab-btn.active {
+    border-color: #000000;
 }

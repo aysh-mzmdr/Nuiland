@@ -1,9 +1,9 @@
-import { createContext, useContext, useState, useEffect} from "react";
+import { createContext, useState, useEffect} from "react";
 import { Web3 } from "web3"
 
 const CHAIN_ID = 1337n
 
-const Web3Context = createContext()
+export const Web3Context = createContext()
 
 export function Web3Provider({children}){
 
@@ -50,6 +50,7 @@ export function Web3Provider({children}){
     },[])
 
     const connect = async() => {
+        console.log("Hello ji")
         if(window.ethereum){
             setConnecting(true)
             try{
@@ -85,9 +86,4 @@ export function Web3Provider({children}){
         {children}
         </Web3Context.Provider>
     )
-}
-
-export default function useWeb3(){
-    const context = useContext(Web3Context)
-    return context
 }
