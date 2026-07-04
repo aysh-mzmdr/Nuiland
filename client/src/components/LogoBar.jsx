@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import useWeb3 from '../hooks/useWeb3'
 
 const LogoBar = () => {
     const {web3,account,connect,disconnect,connecting,error} = useWeb3() || {}
+    const navigate = useNavigate()
 
     const [menuOpen, setMenuOpen] = useState(false)
     const menuRef = useRef(null)
@@ -24,13 +26,19 @@ const LogoBar = () => {
         setMenuOpen(false)
     }
 
+    const handleProfile = () => {
+        navigate('/profile')
+        setMenuOpen(false)
+    }
+
     return (
         <div className="logo-bar-wrapper">
             <div className="logo-bar">
                 <div className="logo-bar-logo">Nuiland</div>
 
+                {(error || !web3) && <span className="logo-bar-error">{error?.message ?? "Web3 Unavailable"}</span>}
+
                 <div className="logo-bar-wallet">
-                    {(error || !web3) && <span className="logo-bar-error">{error?.message ?? "Web3 Unavailable"}</span>}
                     {account ? (
                         <>
                             <span className="logo-bar-status-dot" />
@@ -39,6 +47,9 @@ const LogoBar = () => {
                                 <div className="logo-bar-avatar" onClick={() => setMenuOpen((open) => !open)} />
                                 {menuOpen && (
                                     <div className="logo-bar-menu">
+                                        <button className="logo-bar-menu-profile" onClick={handleProfile}>
+                                            Profile
+                                        </button>
                                         <button className="logo-bar-menu-disconnect" onClick={handleDisconnect}>
                                             Disconnect
                                         </button>

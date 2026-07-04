@@ -1,0 +1,163 @@
+.profile-page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.profile-back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--color-text);
+    font-size: 0.9rem;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.profile-back-link:hover {
+    opacity: 1;
+}
+
+.profile-info {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.profile-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    background: var(--color-card);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.profile-stat-label {
+    font-size: 0.8rem;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.profile-stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.profile-address {
+    font-family: monospace;
+    font-weight: 400;
+}
+
+.profile-assets-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.profile-assets-header h3 {
+    margin: 0;
+    color: var(--color-text);
+}
+
+.profile-sell-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-cta);
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.profile-sell-btn:hover {
+    background-color: #c2410c;
+}
+
+.profile-assets-empty {
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px;
+    background: var(--color-card);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sell-back-link {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    border: none;
+    background: none;
+    color: var(--color-text);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.sell-back-link:hover {
+    opacity: 1;
+}
+
+.sell-title {
+    margin: 0 0 16px;
+    color: var(--color-text);
+}
+
+.sell-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 12px;
+}
+
+.sell-input,
+.sell-textarea {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+
+.sell-textarea {
+    resize: none;
+    line-height: 1.5;
+}
+
+.sell-char-count {
+    align-self: flex-end;
+    font-size: 0.75rem;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.sell-submit-btn {
+    margin-top: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-cta);
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.sell-submit-btn:hover {
+    background-color: #c2410c;
+}

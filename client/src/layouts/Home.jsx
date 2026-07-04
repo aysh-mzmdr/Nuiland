@@ -1,16 +1,15 @@
 import { useState } from "react"
 
-import LogoBar from "../components/LogoBar"
+import LogoBar from '../components/LogoBar'
 import Marketplace from "../pages/Marketplace"
 import Game from "../pages/Game"
 
-export default function Home(){
-
+export default function Home() {
     const [activeTab, setActiveTab] = useState('marketplace')
 
-    return(
+    return (
         <>
-            <LogoBar/>
+            <LogoBar />
             <div className="home-tabs">
                 <button
                     className={`home-tab-btn ${activeTab === 'marketplace' ? 'active' : ''}`}
@@ -25,7 +24,7 @@ export default function Home(){
                     Games
                 </button>
             </div>
-            {activeTab === 'marketplace' ? <Marketplace/> : <Game/>}
+            {activeTab === 'marketplace' ? <Marketplace /> : <Game />}
         </>
     )
 }

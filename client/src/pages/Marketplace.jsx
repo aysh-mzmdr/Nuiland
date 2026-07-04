@@ -1,5 +1,21 @@
+import Card from "../components/Card/Card";
+
 export default function Marketplace(){
     return(
-        <h2>Marketplace</h2>
+        <div className="marketplace-grid">
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+            <Card name="Aloo" description="A good product" price="100"/>
+        </div>
     )
 }

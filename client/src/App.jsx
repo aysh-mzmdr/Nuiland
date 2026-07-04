@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Web3Provider } from "./contexts/Web3Context"
-import Home from "./layouts/Home"
+import Home from './layouts/Home'
+import Profile from "./layouts/Profile"
 import Page404 from "./layouts/Page404"
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>
